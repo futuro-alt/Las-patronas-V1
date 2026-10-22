@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Las Patronas</title>
+<meta name="description" content="Compras, ventas, inventario, cobranza y recordatorios de Huevos de rancho: Las Patronas.">
+<meta name="theme-color" content="#D8B680" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1828" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Las Patronas">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preload" href="fonts/cabin-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/cabin-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/norican-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="riel" aria-label="Menú principal">
+    <div class="marca"><span class="marca-nombre">Las Patronas</span><span class="marca-sub">Huevos de rancho</span></div>
+    <svg class="adorno" viewBox="0 0 150 18" aria-hidden="true">
+      <path d="M6 9H58M92 9H144" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="3 3" stroke-linecap="round" opacity=".7"/>
+      <g fill="var(--hoja)">
+        <ellipse cx="62" cy="6.2" rx="4.4" ry="1.7" transform="rotate(-28 62 6.2)"/>
+        <ellipse cx="62" cy="11.8" rx="4.4" ry="1.7" transform="rotate(28 62 11.8)"/>
+        <ellipse cx="88" cy="6.2" rx="4.4" ry="1.7" transform="rotate(28 88 6.2)"/>
+        <ellipse cx="88" cy="11.8" rx="4.4" ry="1.7" transform="rotate(-28 88 11.8)"/>
+      </g>
+      <g fill="currentColor">
+        <circle cx="75" cy="4.3" r="2.6"/><circle cx="79.5" cy="7.6" r="2.6"/><circle cx="77.8" cy="12.8" r="2.6"/><circle cx="72.2" cy="12.8" r="2.6"/><circle cx="70.5" cy="7.6" r="2.6"/>
+      </g>
+      <circle cx="75" cy="9" r="2.1" fill="var(--mostaza)"/>
+    </svg>
+    <nav class="nav-riel" id="nav-riel" aria-label="Secciones"></nav>
+    <div class="riel-pie"><span class="estado"></span><button type="button" class="btn chico" data-act="ajustes" id="btn-ajustes-riel">Ajustes</button></div>
+  </aside>
+  <div class="cuerpo">
+    <header class="barra">
+      <div class="barra-in">
+        <div class="marca"><span class="marca-nombre">Las Patronas</span><span class="marca-sub">Huevos de rancho</span></div>
+        <div class="barra-der"><span class="estado"></span><button type="button" class="btn chico solo-icono" data-act="ajustes" id="btn-ajustes" aria-label="Ajustes"></button></div>
+      </div>
+    </header>
+    <main class="contenido" id="contenido">
+      <div id="avisos"></div>
+      <div id="vista"></div>
+    </main>
+  </div>
+  <nav class="pestanas" id="nav-tabs" aria-label="Secciones"></nav>
+  <button type="button" class="fab" id="fab" data-act="fab" hidden></button>
+  <div class="capa" id="capa" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <input type="file" id="archivo-respaldo" accept=".json,application/json" hidden>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
